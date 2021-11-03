@@ -1,8 +1,8 @@
 import mysql.connector as db
 
 # Conexion con base de datos, necesita un host, el usuario de la base y una contraseña
-mydb = db.connect(host='35.225.17.101', user='root',
-                  password='12345', database='mydatabase')
+mydb = db.connect(host='host', user='user',
+                  password='password', database='mydatabase')
 
 mycursor = mydb.cursor()
 # Creacion de una base de datos
