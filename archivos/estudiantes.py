@@ -1,0 +1,6 @@
+print("Nombres de estudiantes")  
+print("Francisco")  
+print("Emma")  
+print("Manuel")  
+print("Americo")  
+print("Jose")  

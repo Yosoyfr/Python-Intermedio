@@ -10,30 +10,31 @@ MODES
 '''
 
 # Lectura de archivos
-ruta = "lectura.txt"
+ruta = "file.txt"
 # Apertura del archivo
 archivo = open(ruta)
 # Lectura de todo el contenido del archivo
-# print(archivo.read())
+# contenido = archivo.read()
 
-# Lectura de linea por lina
-#linea1 = archivo.readline()
-#linea2 = archivo.readline()
 
-#linea3 = archivo.readline(6)
-# print(linea1)
-# print(linea2)
-# print(linea3)
+# Lectura en partes del archivo
+#contenido = archivo.read(12)
 
-# Leer el archivo completo
+
+# Lectura linea por linea
+# linea1 = archivo.readline().strip()
+# linea2 = archivo.readline().strip()
+# linea3 = archivo.readline().strip()
+# linea4 = archivo.readline().strip()
+# print(linea4)
+
 linea = archivo.readline().strip()
-while linea != "":
+while linea != '':
     print(linea)
-    if linea == "Francisco":
+    if linea == 'Mauricio':
         break
     linea = archivo.readline().strip()
 
-
 # Cierre del archivo
 archivo.close()
-print("Fin de la lectura")
+print('Fin de la lectura')
