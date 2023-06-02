@@ -1,11 +1,17 @@
-from flask import Flask, request, json, jsonify
+import os
+from dotenv import load_dotenv
+from flask import Flask, request, jsonify
 from flask_pymongo import PyMongo, ObjectId
-from pymongo import results
 from flask_cors import CORS
+
+# Cargar las variables de entorno
+load_dotenv()
 
 # Instancia del servior web con FLASK
 app = Flask(__name__)
-app.config['MONGO_URI'] = 'mongodb://localhost/bookstore'
+
+# Cargar la URL del servidor de base de datos (MongoDB)
+app.config['MONGO_URI'] = os.environ.get("URI_MONGODB")
 
 
 # Instancia de la conexion con MONGO DB
@@ -21,7 +27,7 @@ cors = CORS(app, resources={r"/*": {'origins': '*'}})
 # Rutas
 @app.route('/')
 def index():
-    return '<h1>Server Funcionando</h1>'
+    return '<h1>Servidor Funcionando</h1>'
 
 
 # Ruta para agregar libros
